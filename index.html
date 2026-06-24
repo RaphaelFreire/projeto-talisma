@@ -96,7 +96,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -108,7 +111,9 @@
   </head>
   <body>
     <!-- Skip-link para navegação por teclado -->
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
 
     <!-- Cursor personalizado -->
     <div class="cursor-dot" aria-hidden="true"></div>
@@ -155,1051 +160,52 @@
     </header>
 
     <main id="main-content">
-
-    <!-- ============ HERO ============ -->
-    <section id="topo" data-hero>
-      <div
-        class="img-ph hero-bg"
-        id="hero-bg"
-        role="img"
-        aria-label="Sócio Talismã trabalhando em casa, notebook, luz natural"
-      >
-        <img
-          src="./assets/imagem-hero.png"
-          alt="Sócio Talismã trabalhando em casa com notebook"
-          width="1920"
-          height="1080"
-          fetchpriority="high"
-        />
-      </div>
-      <div data-hero-overlay></div>
-      <div class="hero-glow"></div>
-      <div class="hero-orb hero-orb--green" aria-hidden="true"></div>
-      <div class="hero-orb hero-orb--blue" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="hero-eyebrow">Oportunidade</p>
-        <h1 data-hero-h1>
-          Seja franqueado e <span class="text-accent">ganhe dinheiro </span> com
-          o mercado de seguros.
-        </h1>
-        <p class="hero-sub">
-          Construa sua própria operação com suporte completo,
-          <strong>mais de 300 produtos</strong>
-          para vender e potencial de renda recorrente todos os meses.
-        </p>
-        <div class="hero-cta-group">
-          <a
-            href="https://wa.me/5517992242020?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20ser%20s%C3%B3cio%20Talism%C3%A3."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-primary hv1"
-            data-magnetic
-            >Quero falar com um especialista</a
-          >
-          <span class="hero-security">
-            <svg
-              viewBox="0 0 24 24"
-              width="15"
-              height="15"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-            >
-              <rect x="5" y="11" width="14" height="9" rx="2" />
-              <path d="M8 11V8a4 4 0 0 1 8 0v3" />
-            </svg>
-            Disponibilidade limitada por região
-          </span>
-        </div>
-        <div data-badges>
-          <div class="badge-stat">
-            <div class="badge-stat-value">A partir de <br />R$ 25 mil</div>
-            <div class="badge-stat-label">Investimento</div>
-            <img src="./assets/icon-invest.svg" alt="icone investimento" />
-          </div>
-          <div class="badge-stat">
-            <div class="badge-stat-value">100% Home Based</div>
-            <div class="badge-stat-label">Operação</div>
-            <img src="./assets/icon-wallet.svg" alt="icone carteira" />
-          </div>
-          <div class="badge-stat">
-            <div class="badge-stat-value">
-              07<br />
-              meses
-            </div>
-            <div class="badge-stat-label">Payback médio</div>
-            <img src="./assets/icon-calendar.svg" alt="icone calendário" />
-          </div>
-          <div class="badge-stat">
-            <div class="badge-stat-value">
-              +300 <br />
-              produtos
-            </div>
-            <div class="badge-stat-label">Para vender</div>
-            <img src="./assets/icon-product.svg" alt="icone produtos" />
-          </div>
-        </div>
-      </div>
-      <div data-scroll-cue aria-hidden="true">
-        <svg
-          viewBox="0 0 24 24"
-          width="22"
-          height="22"
-          fill="none"
-          stroke="rgba(255,255,255,.6)"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+      <!-- ============ HERO ============ -->
+      <section id="topo" data-hero>
+        <div
+          class="img-ph hero-bg"
+          id="hero-bg"
+          role="img"
+          aria-label="Sócio Talismã trabalhando em casa, notebook, luz natural"
         >
-          <path d="M6 9l6 6 6-6" />
-        </svg>
-      </div>
-    </section>
-
-    <!-- ============ NÚMEROS ============ -->
-    <section id="numeros">
-      <div class="container">
-        <p data-reveal="up" class="eyebrow eyebrow--strong eyebrow--center">
-          Talismã em números
-        </p>
-        <div data-nums>
-          <div data-reveal="up" data-delay="0" class="num-item">
-            <div class="num-value">
-              <span data-count="15">0</span>
-            </div>
-            <div class="num-label">Anos de mercado</div>
-          </div>
-          <div data-reveal="up" data-delay="80" class="num-item">
-            <div class="num-value">
-              <span data-count="11">0</span>
-            </div>
-            <div class="num-label">Estados do Brasil</div>
-          </div>
-          <div data-reveal="up" data-delay="160" class="num-item">
-            <div class="num-value">
-              <span data-count="50">0</span>
-            </div>
-            <div class="num-label">parceiros e seguradoras</div>
-          </div>
-          <div data-reveal="up" data-delay="240" class="num-item">
-            <div class="num-value">
-              <span data-count="50">0</span>
-            </div>
-            <div class="num-label">mil de faturamento médio</div>
-          </div>
+          <img
+            src="./assets/imagem-hero.png"
+            alt="Sócio Talismã trabalhando em casa com notebook"
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
         </div>
-      </div>
-    </section>
-
-    <!-- ============ DOR ============ -->
-    <section id="dor">
-      <div class="container section-flex">
-        <div class="col-text">
-          <p data-reveal="up" class="eyebrow eyebrow--accent">
-            O ponto de virada
+        <div data-hero-overlay></div>
+        <div class="hero-glow"></div>
+        <div class="hero-orb hero-orb--green" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb--blue" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">Oportunidade</p>
+          <h1 data-hero-h1>
+            Seja franqueado e
+            <span class="text-accent">ganhe dinheiro </span> com o mercado de
+            seguros.
+          </h1>
+          <p class="hero-sub">
+            Construa sua própria operação com suporte completo,
+            <strong>mais de 300 produtos</strong>
+            para vender e potencial de renda recorrente todos os meses.
           </p>
-          <h2 data-reveal="up" data-delay="60" class="section-title">
-            Cansado de trocar tempo por dinheiro?
-          </h2>
-          <div data-reveal="up" data-delay="120" class="pain-list">
-            <div class="pain-item">
-              <span class="pain-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="13"
-                  height="13"
-                  fill="none"
-                  stroke="rgba(255,255,255,.6)"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                >
-                  <path d="M6 6l12 12M18 6L6 18" /></svg
-              ></span>
-              <span class="pain-text"
-                >Depender apenas do salário ou de comissão limitada</span
-              >
-            </div>
-            <div class="pain-item">
-              <span class="pain-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="13"
-                  height="13"
-                  fill="none"
-                  stroke="rgba(255,255,255,.6)"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                >
-                  <path d="M6 6l12 12M18 6L6 18" /></svg
-              ></span>
-              <span class="pain-text"
-                >Franquias caras e negócios com alto risco</span
-              >
-            </div>
-            <div class="pain-item">
-              <span class="pain-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="13"
-                  height="13"
-                  fill="none"
-                  stroke="rgba(255,255,255,.6)"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                >
-                  <path d="M6 6l12 12M18 6L6 18" /></svg
-              ></span>
-              <span class="pain-text">Falta de experiência no segmento</span>
-            </div>
-            <div class="pain-item">
-              <span class="pain-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="13"
-                  height="13"
-                  fill="none"
-                  stroke="rgba(255,255,255,.6)"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                >
-                  <path d="M6 6l12 12M18 6L6 18" /></svg
-              ></span>
-              <span class="pain-text">Medo de investir e não ter retorno</span>
-            </div>
-            <div class="pain-item">
-              <span class="pain-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="13"
-                  height="13"
-                  fill="none"
-                  stroke="rgba(255,255,255,.6)"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                >
-                  <path d="M6 6l12 12M18 6L6 18" /></svg
-              ></span>
-              <span class="pain-text"
-                >Negócios que exigem estoque, equipe e estrutura</span
-              >
-            </div>
-          </div>
-          <div data-reveal="up" data-delay="180" class="quote-block">
-            <p>
-              Com a Talismã você começa de forma simples, com suporte completo,
-              em um dos mercados que mais crescem no Brasil.
-            </p>
-          </div>
-        </div>
-        <div data-reveal="right" data-delay="120" class="col-visual">
-          <div
-            class="img-ph dor-photo"
-            id="dor-foto"
-            role="img"
-            aria-label="Foto: pessoa decidida / momento de virada"
-            data-img-placeholder="Foto: pessoa decidida / momento de virada"
-          >
-            <img
-              src="./assets/empresarios.png"
-              alt="Dois empresários sócios Talismã lado a lado"
-              width="800"
-              height="1000"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ COMO FUNCIONA ============ -->
-    <section id="como">
-      <div class="container">
-        <p data-reveal="up" class="eyebrow eyebrow--strong">Como funciona</p>
-        <h2
-          data-reveal="up"
-          data-delay="60"
-          class="section-title section-title--narrow"
-        >
-          Do zero ao seu negócio em 4 passos
-        </h2>
-        <div class="steps-grid">
-          <div data-reveal="up" data-delay="0" class="step-card hv2">
-            <div class="step-num">01</div>
-            <h3 class="step-title">Treinamento</h3>
-            <p class="step-desc">
-              Aprenda o modelo com nosso método validado, do básico à operação.
-            </p>
-          </div>
-          <div data-reveal="up" data-delay="90" class="step-card hv2">
-            <div class="step-num">02</div>
-            <h3 class="step-title">Estrutura pronta</h3>
-            <p class="step-desc">
-              Você recebe todas as ferramentas e o suporte necessários para
-              operar.
-            </p>
-          </div>
-          <div data-reveal="up" data-delay="180" class="step-card hv2">
-            <div class="step-num">03</div>
-            <h3 class="step-title">Vendas</h3>
-            <p class="step-desc">
-              Ofereça mais de 300 produtos para pessoas físicas e empresas.
-            </p>
-          </div>
-          <div
-            data-reveal="up"
-            data-delay="270"
-            class="step-card step-card--accent hv3"
-          >
-            <div class="step-num">04</div>
-            <h3 class="step-title">Renda recorrente</h3>
-            <p class="step-desc">
-              Receba comissões todas as vezes que o cliente renovar a apólice.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MARQUEE ============ -->
-    <section class="marquee-section">
-      <p class="marquee-eyebrow">Um mercado que não para de crescer</p>
-      <div class="marquee-track">
-        <div class="marquee-group">
-          <span class="marquee-word">Seguro Auto</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Residencial</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Plano de Saúde</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Seguro de Vida</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Empresarial</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Consórcio</span
-          ><span class="marquee-dot">·</span>
-        </div>
-        <div class="marquee-group" aria-hidden="true">
-          <span class="marquee-word">Seguro Auto</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Residencial</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Plano de Saúde</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Seguro de Vida</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Empresarial</span
-          ><span class="marquee-dot">·</span>
-          <span class="marquee-word">Consórcio</span
-          ><span class="marquee-dot">·</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GANHOS ============ -->
-    <section id="ganhos">
-      <div class="container ganhos-inner">
-        <div class="ganhos-col-left">
-          <p data-reveal="up" class="eyebrow eyebrow--accent">
-            Quanto posso ganhar
-          </p>
-          <h2 data-reveal="up" data-delay="60" class="section-title">
-            O teto é o seu esforço
-          </h2>
-          <p data-reveal="up" data-delay="120" class="ganhos-sub">
-            E o melhor: quando o cliente renova a apólice, você continua
-            recebendo comissões todos os meses.
-          </p>
-          <p data-reveal="up" data-delay="160" class="ganhos-example">
-            Exemplo: Seguro Saúde Empresarial com prêmio de R$ 6.000
-          </p>
-          <div data-reveal="scale" data-delay="180" class="earnings-card">
-            <div class="earnings-card-label">Comissão de até</div>
-            <div class="earnings-card-value">R$ 18.000</div>
-          </div>
-          <a
-            data-reveal="up"
-            data-delay="220"
-            href="https://wa.me/5517992242020?text=Ol%C3%A1%21%20Gostaria%20de%20simular%20meus%20ganhos%20como%20s%C3%B3cio%20Talism%C3%A3."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-outline hv4"
-            >Simular meus ganhos</a
-          >
-        </div>
-        <div class="ganhos-col-right">
-          <div data-reveal="left" data-delay="100" class="tier-card">
-            <div>
-              <div class="tier-label">3 vendas/mês</div>
-              <div class="tier-sublabel">receita bruta</div>
-            </div>
-            <div class="tier-value">R$ 54mil</div>
-          </div>
-          <div data-reveal="left" data-delay="170" class="tier-card">
-            <div>
-              <div class="tier-label">5 vendas/mês</div>
-              <div class="tier-sublabel">receita bruta</div>
-            </div>
-            <div class="tier-value">R$ 90mil</div>
-          </div>
-          <div
-            data-reveal="left"
-            data-delay="240"
-            class="tier-card tier-card--accent"
-          >
-            <div>
-              <div class="tier-label">10 vendas/mês</div>
-              <div class="tier-sublabel">receita bruta</div>
-            </div>
-            <div class="tier-value">R$ 180mil</div>
-          </div>
-          <p class="ganhos-disclaimer">
-            *Os resultados variam conforme dedicação, região e mix de produtos.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BENEFÍCIOS ============ -->
-    <section id="beneficios">
-      <div class="container">
-        <p data-reveal="up" class="eyebrow eyebrow--strong">
-          O que você recebe
-        </p>
-        <h2
-          data-reveal="up"
-          data-delay="60"
-          class="section-title section-title--wide"
-        >
-          Uma estrutura inteira ao se tornar sócio
-        </h2>
-        <div class="benefits-grid">
-          <div data-reveal="up" data-delay="0" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+          <div class="hero-cta-group">
+            <a
+              href="https://wa.me/5517992242020?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20ser%20s%C3%B3cio%20Talism%C3%A3."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary hv1"
+              data-magnetic
+              >Quero falar com um especialista</a
             >
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-              <path d="M3 9h18" />
-            </svg>
-            <h3 class="benefit-title">CRM Completo</h3>
-            <p class="benefit-desc">
-              Gestão de carteira e funil de vendas integrados.
-            </p>
-          </div>
-          <div data-reveal="up" data-delay="60" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="5" y="3" width="14" height="18" rx="2" />
-              <path d="M8 7h8M8 11h3M14 11h2M8 15h3M14 15h2" />
-            </svg>
-            <h3 class="benefit-title">Multicálculo</h3>
-            <p class="benefit-desc">Cotação avançada comparando seguradoras.</p>
-          </div>
-          <div data-reveal="up" data-delay="120" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z" />
-              <path d="M9.5 12l1.8 1.8L15 10" />
-            </svg>
-            <h3 class="benefit-title">Gestão de Sinistros</h3>
-            <p class="benefit-desc">
-              Acompanhamento do cliente do início ao fim.
-            </p>
-          </div>
-          <div data-reveal="up" data-delay="180" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 10v4h3l8 5V5L7 10z" />
-              <path d="M18 9c1.5 1.5 1.5 4.5 0 6" />
-            </svg>
-            <h3 class="benefit-title">Materiais de Marketing</h3>
-            <p class="benefit-desc">
-              Peças prontas para atrair e converter clientes.
-            </p>
-          </div>
-          <div data-reveal="up" data-delay="0" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="9" />
-              <path d="M10 8.5l6 3.5-6 3.5z" />
-            </svg>
-            <h3 class="benefit-title">Treinamentos Semanais</h3>
-            <p class="benefit-desc">
-              Capacitação contínua de produto e vendas.
-            </p>
-          </div>
-          <div data-reveal="up" data-delay="60" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="9" cy="8" r="3" />
-              <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
-              <circle cx="17.5" cy="7.5" r="2.2" />
-              <path d="M16 13.5c2.5.4 4 2.4 4 5" />
-            </svg>
-            <h3 class="benefit-title">Mentorias Estratégicas</h3>
-            <p class="benefit-desc">
-              Direcionamento de quem já trilhou o caminho.
-            </p>
-          </div>
-          <div data-reveal="up" data-delay="120" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 5h16v11H8l-4 4z" />
-              <path d="M8 9h8M8 12h5" />
-            </svg>
-            <h3 class="benefit-title">Suporte Comercial</h3>
-            <p class="benefit-desc">Apoio direto para fechar suas vendas.</p>
-          </div>
-          <div data-reveal="up" data-delay="180" class="benefit-card hv5">
-            <svg
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="var(--accent-strong)"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 13v-1a7 7 0 0 1 14 0v1" />
-              <rect x="3" y="13" width="3.5" height="6" rx="1.6" />
-              <rect x="17.5" y="13" width="3.5" height="6" rx="1.6" />
-            </svg>
-            <h3 class="benefit-title">Suporte Operacional</h3>
-            <p class="benefit-desc">Retaguarda para emissões e processos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ COMPARATIVO ============ -->
-    <section id="comparativo">
-      <div class="container">
-        <p data-reveal="up" class="eyebrow eyebrow--strong">Comparativo</p>
-        <h2
-          data-reveal="up"
-          data-delay="60"
-          class="section-title section-title--margin"
-        >
-          Talismã vs franquia tradicional
-        </h2>
-        <div data-reveal="up" data-delay="120" class="table-wrap">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Critério</th>
-                <th class="col-talisma">Sócio Talismã</th>
-                <th>Franquia tradicional</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="td-label">Investimento inicial</td>
-                <td class="td-talisma">A partir de R$ 25 mil</td>
-                <td class="td-other">R$ 80 mil+</td>
-              </tr>
-              <tr>
-                <td class="td-label">Estoque</td>
-                <td class="td-talisma">Não</td>
-                <td class="td-other">Sim</td>
-              </tr>
-              <tr>
-                <td class="td-label">Funcionários</td>
-                <td class="td-talisma">Opcional</td>
-                <td class="td-other">Sim</td>
-              </tr>
-              <tr>
-                <td class="td-label">Estrutura física</td>
-                <td class="td-talisma">Opcional</td>
-                <td class="td-other">Sim</td>
-              </tr>
-              <tr>
-                <td class="td-label">Operação</td>
-                <td class="td-talisma">Nacional</td>
-                <td class="td-other">Local</td>
-              </tr>
-              <tr>
-                <td class="td-label">Renda recorrente</td>
-                <td class="td-talisma">Alta</td>
-                <td class="td-other">Baixa</td>
-              </tr>
-              <tr>
-                <td class="td-label">Payback médio</td>
-                <td class="td-talisma td-talisma--bold">7 meses</td>
-                <td class="td-other">12 - 24 meses</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ HISTÓRIAS ============ -->
-    <section id="historias">
-      <div class="container">
-        <p data-reveal="up" class="eyebrow eyebrow--accent">Histórias reais</p>
-        <h2
-          data-reveal="up"
-          data-delay="60"
-          class="section-title section-title--wide"
-        >
-          Quem decidiu começar
-        </h2>
-        <div class="testimonials-grid">
-          <div data-reveal="up" data-delay="0" class="testimonial-card hv6">
-            <svg
-              viewBox="0 0 24 24"
-              width="32"
-              height="32"
-              fill="var(--accent)"
-              class="testimonial-quote-icon"
-            >
-              <path
-                d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0-2-2zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0 0-2z"
-              />
-            </svg>
-            <p class="testimonial-text">
-              A Talismã me deu o suporte e o método que eu precisava para sair
-              do zero e construir meu negócio.
-            </p>
-            <div data-dep-meta>
-              <div
-                class="img-ph dep-avatar"
-                id="dep-1"
-                role="img"
-                aria-label="Foto"
-                data-img-placeholder="Foto"
-              >
-                <img
-                  src="./assets/pessoa-um.png"
-                  alt="Foto de João Paulo"
-                  width="54"
-                  height="54"
-                  loading="lazy"
-                />
-              </div>
-              <div class="dep-info">
-                <div class="dep-name">João Paulo</div>
-                <div class="dep-location">Ribeirão Preto · SP</div>
-              </div>
-              <span data-dep-badge>Sócio 2022</span>
-            </div>
-          </div>
-          <div data-reveal="up" data-delay="90" class="testimonial-card hv6">
-            <svg
-              viewBox="0 0 24 24"
-              width="32"
-              height="32"
-              fill="var(--accent)"
-              class="testimonial-quote-icon"
-            >
-              <path
-                d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0-2-2zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0 0-2z"
-              />
-            </svg>
-            <p class="testimonial-text">
-              Hoje trabalho de casa, com mais qualidade de vida e uma renda
-              muito maior do que quando era CLT.
-            </p>
-            <div data-dep-meta>
-              <div
-                class="img-ph dep-avatar"
-                id="dep-2"
-                role="img"
-                aria-label="Foto"
-                data-img-placeholder="Foto"
-              >
-                <img
-                  src="./assets/pessoa-dois.png"
-                  alt="Foto de Mariana Alves"
-                  width="54"
-                  height="54"
-                  loading="lazy"
-                />
-              </div>
-              <div class="dep-info">
-                <div class="dep-name">Mariana Alves</div>
-                <div class="dep-location">Goiânia · GO</div>
-              </div>
-              <span data-dep-badge>Sócia 2021</span>
-            </div>
-          </div>
-          <div data-reveal="up" data-delay="180" class="testimonial-card hv6">
-            <svg
-              viewBox="0 0 24 24"
-              width="32"
-              height="32"
-              fill="var(--accent)"
-              class="testimonial-quote-icon"
-            >
-              <path
-                d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0-2-2zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0 0-2z"
-              />
-            </svg>
-            <p class="testimonial-text">
-              Já no primeiro ano recuperei meu investimento e hoje tenho
-              liberdade financeira.
-            </p>
-            <div data-dep-meta>
-              <div
-                class="img-ph dep-avatar"
-                id="dep-3"
-                role="img"
-                aria-label="Foto"
-                data-img-placeholder="Foto"
-              >
-                <img
-                  src="./assets/pessoa-tres.png"
-                  alt="Foto de Carlos Mendes"
-                  width="54"
-                  height="54"
-                  loading="lazy"
-                />
-              </div>
-              <div class="dep-info">
-                <div class="dep-name">Carlos Mendes</div>
-                <div class="dep-location">Curitiba · PR</div>
-              </div>
-              <span data-dep-badge>Sócio 2020</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section id="faq">
-      <div class="container">
-        <p data-reveal="up" class="eyebrow eyebrow--strong">
-          Dúvidas frequentes
-        </p>
-        <h2
-          data-reveal="up"
-          data-delay="60"
-          class="section-title section-title--margin"
-        >
-          Ainda em dúvida?
-        </h2>
-        <div data-reveal="up" data-delay="100" class="faq-grid">
-          <div data-faq-item data-open="0">
-            <button data-faq-q>
-              Preciso ter experiência no mercado de seguros?
-              <svg
-                data-faq-icon
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="var(--accent-strong)"
-                stroke-width="2.2"
-                stroke-linecap="round"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            </button>
-            <div data-faq-a>
-              <p class="faq-answer-p">
-                Não. Você recebe treinamento completo e suporte contínuo para
-                começar mesmo sem experiência no setor.
-              </p>
-            </div>
-          </div>
-          <div data-faq-item data-open="0">
-            <button data-faq-q>
-              Preciso ser corretor de seguros?
-              <svg
-                data-faq-icon
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="var(--accent-strong)"
-                stroke-width="2.2"
-                stroke-linecap="round"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            </button>
-            <div data-faq-a>
-              <p class="faq-answer-p">
-                Não é pré-requisito. Orientamos você sobre toda a parte de
-                habilitação e operação ao longo do processo.
-              </p>
-            </div>
-          </div>
-          <div data-faq-item data-open="0">
-            <button data-faq-q>
-              Qual o valor do investimento?
-              <svg
-                data-faq-icon
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="var(--accent-strong)"
-                stroke-width="2.2"
-                stroke-linecap="round"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            </button>
-            <div data-faq-a>
-              <p class="faq-answer-p">
-                O investimento começa a partir de R$ 25 mil, bem abaixo de uma
-                franquia tradicional, com payback médio de 7 meses.
-              </p>
-            </div>
-          </div>
-          <div data-faq-item data-open="0">
-            <button data-faq-q>
-              Qual tempo recupero meu investimento?
-              <svg
-                data-faq-icon
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="var(--accent-strong)"
-                stroke-width="2.2"
-                stroke-linecap="round"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            </button>
-            <div data-faq-a>
-              <p class="faq-answer-p">
-                O payback médio é de 7 meses, variando conforme dedicação,
-                região e mix de produtos vendidos.
-              </p>
-            </div>
-          </div>
-          <div data-faq-item data-open="0">
-            <button data-faq-q>
-              A Talismã gera leads para mim?
-              <svg
-                data-faq-icon
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="var(--accent-strong)"
-                stroke-width="2.2"
-                stroke-linecap="round"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            </button>
-            <div data-faq-a>
-              <p class="faq-answer-p">
-                Você conta com materiais de marketing e apoio comercial para
-                atrair e converter clientes na sua região.
-              </p>
-            </div>
-          </div>
-          <div data-faq-item data-open="0">
-            <button data-faq-q>
-              Posso trabalhar de qualquer lugar?
-              <svg
-                data-faq-icon
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="var(--accent-strong)"
-                stroke-width="2.2"
-                stroke-linecap="round"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            </button>
-            <div data-faq-a>
-              <p class="faq-answer-p">
-                Sim. A operação é 100% home based e digital, de alcance nacional
-                — você atende de onde estiver.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CTA FINAL ============ -->
-    <section id="sou-socio">
-      <div class="container cta-inner">
-        <div class="cta-col-left">
-          <p data-reveal="up" class="eyebrow eyebrow--accent">Comece agora</p>
-          <h2 data-reveal="up" data-delay="60" class="section-title">
-            Quero ser sócio fraqueado da Talismã
-          </h2>
-          <p data-reveal="up" data-delay="120" class="cta-sub">
-            Preencha seus dados e descubra se existe disponibilidade para a sua
-            região.
-          </p>
-          <div data-reveal="up" data-delay="160" class="cta-checklist">
-            <div class="cta-check-item">
-              <span class="cta-check-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="var(--accent)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 13l4 4 10-12" /></svg
-              ></span>
-              <span class="cta-check-text">Atendimento personalizado</span>
-            </div>
-            <div class="cta-check-item">
-              <span class="cta-check-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="var(--accent)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 13l4 4 10-12" /></svg
-              ></span>
-              <span class="cta-check-text"
-                >Análise da disponibilidade na sua região</span
-              >
-            </div>
-            <div class="cta-check-item">
-              <span class="cta-check-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="var(--accent)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 13l4 4 10-12" /></svg
-              ></span>
-              <span class="cta-check-text"
-                >Apresentação completa do modelo</span
-              >
-            </div>
-          </div>
-        </div>
-        <div data-reveal="right" data-delay="120" class="cta-col-right">
-          <form class="form-card" data-wa-form>
-            <input
-              id="f-nome"
-              type="text"
-              placeholder="Nome completo"
-              aria-label="Nome completo"
-              class="form-field fc10"
-              autocomplete="name"
-            />
-            <input
-              id="f-fone"
-              type="tel"
-              placeholder="WhatsApp"
-              aria-label="Número de WhatsApp"
-              class="form-field fc10"
-              autocomplete="tel"
-            />
-            <input
-              id="f-email"
-              type="email"
-              placeholder="E-mail"
-              aria-label="Endereço de e-mail"
-              class="form-field fc10"
-              autocomplete="email"
-            />
-            <input
-              id="f-cidade"
-              type="text"
-              placeholder="Cidade"
-              aria-label="Cidade"
-              class="form-field fc10"
-              autocomplete="address-level2"
-            />
-            <select
-              id="f-capital"
-              aria-label="Capital disponível para investir"
-              class="form-field form-field--select fc10"
-            >
-              <option value="">Capital disponível para investir</option>
-              <option value="R$ 25 mil a R$ 50 mil">
-                R$ 25 mil a R$ 50 mil
-              </option>
-              <option value="R$ 50 mil a R$ 100 mil">
-                R$ 50 mil a R$ 100 mil
-              </option>
-              <option value="Acima de R$ 100 mil">Acima de R$ 100 mil</option>
-            </select>
-            <button type="submit" class="btn-submit hv7" data-magnetic>
-              Quero ser sócio
-            </button>
-            <p class="form-privacy">
+            <span class="hero-security">
               <svg
                 viewBox="0 0 24 24"
-                width="13"
-                height="13"
+                width="15"
+                height="15"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="1.8"
@@ -1207,14 +213,1041 @@
                 <rect x="5" y="11" width="14" height="9" rx="2" />
                 <path d="M8 11V8a4 4 0 0 1 8 0v3" />
               </svg>
-              Seus dados estão protegidos e não serão compartilhados.
-            </p>
-          </form>
+              Disponibilidade limitada por região
+            </span>
+          </div>
+          <div data-badges>
+            <div class="badge-stat">
+              <div class="badge-stat-value">A partir de <br />R$ 25 mil</div>
+              <div class="badge-stat-label">Investimento</div>
+              <img
+                src="./assets/icon-invest.svg"
+                width="30"
+                height="30"
+                alt="icone investimento"
+              />
+            </div>
+            <div class="badge-stat">
+              <div class="badge-stat-value">100% Home Based</div>
+              <div class="badge-stat-label">Operação</div>
+              <img
+                src="./assets/icon-wallet.svg"
+                width="30"
+                height="30"
+                alt="icone carteira"
+              />
+            </div>
+            <div class="badge-stat">
+              <div class="badge-stat-value">
+                07<br />
+                meses
+              </div>
+              <div class="badge-stat-label">Payback médio</div>
+              <img
+                src="./assets/icon-calendar.svg"
+                width="30"
+                height="30"
+                alt="icone calendário"
+              />
+            </div>
+            <div class="badge-stat">
+              <div class="badge-stat-value">
+                +300 <br />
+                produtos
+              </div>
+              <div class="badge-stat-label">Para vender</div>
+              <img
+                src="./assets/icon-product.svg"
+                width="30"
+                height="30"
+                alt="icone produtos"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+        <div data-scroll-cue aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="rgba(255,255,255,.6)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+      </section>
 
-    </main><!-- /main-content -->
+      <!-- ============ NÚMEROS ============ -->
+      <section id="numeros">
+        <div class="container">
+          <p data-reveal="up" class="eyebrow eyebrow--strong eyebrow--center">
+            Talismã em números
+          </p>
+          <div data-nums>
+            <div data-reveal="up" data-delay="0" class="num-item">
+              <div class="num-value">
+                <span data-count="15">0</span>
+              </div>
+              <div class="num-label">Anos de mercado</div>
+            </div>
+            <div data-reveal="up" data-delay="80" class="num-item">
+              <div class="num-value">
+                <span data-count="11">0</span>
+              </div>
+              <div class="num-label">Estados do Brasil</div>
+            </div>
+            <div data-reveal="up" data-delay="160" class="num-item">
+              <div class="num-value">
+                <span data-count="50">0</span>
+              </div>
+              <div class="num-label">parceiros e seguradoras</div>
+            </div>
+            <div data-reveal="up" data-delay="240" class="num-item">
+              <div class="num-value">
+                <span data-count="50">0</span>
+              </div>
+              <div class="num-label">mil de faturamento médio</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DOR ============ -->
+      <section id="dor">
+        <div class="container section-flex">
+          <div class="col-text">
+            <p data-reveal="up" class="eyebrow eyebrow--accent">
+              O ponto de virada
+            </p>
+            <h2 data-reveal="up" data-delay="60" class="section-title">
+              Cansado de trocar tempo por dinheiro?
+            </h2>
+            <div data-reveal="up" data-delay="120" class="pain-list">
+              <div class="pain-item">
+                <span class="pain-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                  >
+                    <path d="M6 6l12 12M18 6L6 18" /></svg
+                ></span>
+                <span class="pain-text"
+                  >Depender apenas do salário ou de comissão limitada</span
+                >
+              </div>
+              <div class="pain-item">
+                <span class="pain-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                  >
+                    <path d="M6 6l12 12M18 6L6 18" /></svg
+                ></span>
+                <span class="pain-text"
+                  >Franquias caras e negócios com alto risco</span
+                >
+              </div>
+              <div class="pain-item">
+                <span class="pain-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                  >
+                    <path d="M6 6l12 12M18 6L6 18" /></svg
+                ></span>
+                <span class="pain-text">Falta de experiência no segmento</span>
+              </div>
+              <div class="pain-item">
+                <span class="pain-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                  >
+                    <path d="M6 6l12 12M18 6L6 18" /></svg
+                ></span>
+                <span class="pain-text"
+                  >Medo de investir e não ter retorno</span
+                >
+              </div>
+              <div class="pain-item">
+                <span class="pain-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="rgba(255,255,255,.6)"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                  >
+                    <path d="M6 6l12 12M18 6L6 18" /></svg
+                ></span>
+                <span class="pain-text"
+                  >Negócios que exigem estoque, equipe e estrutura</span
+                >
+              </div>
+            </div>
+            <div data-reveal="up" data-delay="180" class="quote-block">
+              <p>
+                Com a Talismã você começa de forma simples, com suporte
+                completo, em um dos mercados que mais crescem no Brasil.
+              </p>
+            </div>
+          </div>
+          <div data-reveal="right" data-delay="120" class="col-visual">
+            <div
+              class="img-ph dor-photo"
+              id="dor-foto"
+              role="img"
+              aria-label="Foto: pessoa decidida / momento de virada"
+              data-img-placeholder="Foto: pessoa decidida / momento de virada"
+            >
+              <img
+                src="./assets/empresarios.png"
+                alt="Dois empresários sócios Talismã lado a lado"
+                width="800"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ COMO FUNCIONA ============ -->
+      <section id="como">
+        <div class="container">
+          <p data-reveal="up" class="eyebrow eyebrow--strong">Como funciona</p>
+          <h2
+            data-reveal="up"
+            data-delay="60"
+            class="section-title section-title--narrow"
+          >
+            Do zero ao seu negócio em 4 passos
+          </h2>
+          <div class="steps-grid">
+            <div data-reveal="up" data-delay="0" class="step-card hv2">
+              <div class="step-num">01</div>
+              <h3 class="step-title">Treinamento</h3>
+              <p class="step-desc">
+                Aprenda o modelo com nosso método validado, do básico à
+                operação.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="90" class="step-card hv2">
+              <div class="step-num">02</div>
+              <h3 class="step-title">Estrutura pronta</h3>
+              <p class="step-desc">
+                Você recebe todas as ferramentas e o suporte necessários para
+                operar.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="180" class="step-card hv2">
+              <div class="step-num">03</div>
+              <h3 class="step-title">Vendas</h3>
+              <p class="step-desc">
+                Ofereça mais de 300 produtos para pessoas físicas e empresas.
+              </p>
+            </div>
+            <div
+              data-reveal="up"
+              data-delay="270"
+              class="step-card step-card--accent hv3"
+            >
+              <div class="step-num">04</div>
+              <h3 class="step-title">Renda recorrente</h3>
+              <p class="step-desc">
+                Receba comissões todas as vezes que o cliente renovar a apólice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MARQUEE ============ -->
+      <section class="marquee-section">
+        <p class="marquee-eyebrow">Um mercado que não para de crescer</p>
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span class="marquee-word">Seguro Auto</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Residencial</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Plano de Saúde</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Seguro de Vida</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Empresarial</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Consórcio</span
+            ><span class="marquee-dot">·</span>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <span class="marquee-word">Seguro Auto</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Residencial</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Plano de Saúde</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Seguro de Vida</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Empresarial</span
+            ><span class="marquee-dot">·</span>
+            <span class="marquee-word">Consórcio</span
+            ><span class="marquee-dot">·</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GANHOS ============ -->
+      <section id="ganhos">
+        <div class="container ganhos-inner">
+          <div class="ganhos-col-left">
+            <p data-reveal="up" class="eyebrow eyebrow--accent">
+              Quanto posso ganhar
+            </p>
+            <h2 data-reveal="up" data-delay="60" class="section-title">
+              O teto é o seu esforço
+            </h2>
+            <p data-reveal="up" data-delay="120" class="ganhos-sub">
+              E o melhor: quando o cliente renova a apólice, você continua
+              recebendo comissões todos os meses.
+            </p>
+            <p data-reveal="up" data-delay="160" class="ganhos-example">
+              Exemplo: Seguro Saúde Empresarial com prêmio de R$ 6.000
+            </p>
+            <div data-reveal="scale" data-delay="180" class="earnings-card">
+              <div class="earnings-card-label">Comissão de até</div>
+              <div class="earnings-card-value">R$ 18.000</div>
+            </div>
+            <a
+              data-reveal="up"
+              data-delay="220"
+              href="https://wa.me/5517992242020?text=Ol%C3%A1%21%20Gostaria%20de%20simular%20meus%20ganhos%20como%20s%C3%B3cio%20Talism%C3%A3."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline hv4"
+              >Simular meus ganhos</a
+            >
+          </div>
+          <div class="ganhos-col-right">
+            <div data-reveal="left" data-delay="100" class="tier-card">
+              <div>
+                <div class="tier-label">3 vendas/mês</div>
+                <div class="tier-sublabel">receita bruta</div>
+              </div>
+              <div class="tier-value">R$ 54mil</div>
+            </div>
+            <div data-reveal="left" data-delay="170" class="tier-card">
+              <div>
+                <div class="tier-label">5 vendas/mês</div>
+                <div class="tier-sublabel">receita bruta</div>
+              </div>
+              <div class="tier-value">R$ 90mil</div>
+            </div>
+            <div
+              data-reveal="left"
+              data-delay="240"
+              class="tier-card tier-card--accent"
+            >
+              <div>
+                <div class="tier-label">10 vendas/mês</div>
+                <div class="tier-sublabel">receita bruta</div>
+              </div>
+              <div class="tier-value">R$ 180mil</div>
+            </div>
+            <p class="ganhos-disclaimer">
+              *Os resultados variam conforme dedicação, região e mix de
+              produtos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BENEFÍCIOS ============ -->
+      <section id="beneficios">
+        <div class="container">
+          <p data-reveal="up" class="eyebrow eyebrow--strong">
+            O que você recebe
+          </p>
+          <h2
+            data-reveal="up"
+            data-delay="60"
+            class="section-title section-title--wide"
+          >
+            Uma estrutura inteira ao se tornar sócio
+          </h2>
+          <div class="benefits-grid">
+            <div data-reveal="up" data-delay="0" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3 9h18" />
+              </svg>
+              <h3 class="benefit-title">CRM Completo</h3>
+              <p class="benefit-desc">
+                Gestão de carteira e funil de vendas integrados.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="60" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="5" y="3" width="14" height="18" rx="2" />
+                <path d="M8 7h8M8 11h3M14 11h2M8 15h3M14 15h2" />
+              </svg>
+              <h3 class="benefit-title">Multicálculo</h3>
+              <p class="benefit-desc">
+                Cotação avançada comparando seguradoras.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="120" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z" />
+                <path d="M9.5 12l1.8 1.8L15 10" />
+              </svg>
+              <h3 class="benefit-title">Gestão de Sinistros</h3>
+              <p class="benefit-desc">
+                Acompanhamento do cliente do início ao fim.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="180" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 10v4h3l8 5V5L7 10z" />
+                <path d="M18 9c1.5 1.5 1.5 4.5 0 6" />
+              </svg>
+              <h3 class="benefit-title">Materiais de Marketing</h3>
+              <p class="benefit-desc">
+                Peças prontas para atrair e converter clientes.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="0" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M10 8.5l6 3.5-6 3.5z" />
+              </svg>
+              <h3 class="benefit-title">Treinamentos Semanais</h3>
+              <p class="benefit-desc">
+                Capacitação contínua de produto e vendas.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="60" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="9" cy="8" r="3" />
+                <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
+                <circle cx="17.5" cy="7.5" r="2.2" />
+                <path d="M16 13.5c2.5.4 4 2.4 4 5" />
+              </svg>
+              <h3 class="benefit-title">Mentorias Estratégicas</h3>
+              <p class="benefit-desc">
+                Direcionamento de quem já trilhou o caminho.
+              </p>
+            </div>
+            <div data-reveal="up" data-delay="120" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 5h16v11H8l-4 4z" />
+                <path d="M8 9h8M8 12h5" />
+              </svg>
+              <h3 class="benefit-title">Suporte Comercial</h3>
+              <p class="benefit-desc">Apoio direto para fechar suas vendas.</p>
+            </div>
+            <div data-reveal="up" data-delay="180" class="benefit-card hv5">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="var(--accent-strong)"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 13v-1a7 7 0 0 1 14 0v1" />
+                <rect x="3" y="13" width="3.5" height="6" rx="1.6" />
+                <rect x="17.5" y="13" width="3.5" height="6" rx="1.6" />
+              </svg>
+              <h3 class="benefit-title">Suporte Operacional</h3>
+              <p class="benefit-desc">Retaguarda para emissões e processos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ COMPARATIVO ============ -->
+      <section id="comparativo">
+        <div class="container">
+          <p data-reveal="up" class="eyebrow eyebrow--strong">Comparativo</p>
+          <h2
+            data-reveal="up"
+            data-delay="60"
+            class="section-title section-title--margin"
+          >
+            Talismã vs franquia tradicional
+          </h2>
+          <div data-reveal="up" data-delay="120" class="table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Critério</th>
+                  <th class="col-talisma">Sócio Talismã</th>
+                  <th>Franquia tradicional</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-label">Investimento inicial</td>
+                  <td class="td-talisma">A partir de R$ 25 mil</td>
+                  <td class="td-other">R$ 80 mil+</td>
+                </tr>
+                <tr>
+                  <td class="td-label">Estoque</td>
+                  <td class="td-talisma">Não</td>
+                  <td class="td-other">Sim</td>
+                </tr>
+                <tr>
+                  <td class="td-label">Funcionários</td>
+                  <td class="td-talisma">Opcional</td>
+                  <td class="td-other">Sim</td>
+                </tr>
+                <tr>
+                  <td class="td-label">Estrutura física</td>
+                  <td class="td-talisma">Opcional</td>
+                  <td class="td-other">Sim</td>
+                </tr>
+                <tr>
+                  <td class="td-label">Operação</td>
+                  <td class="td-talisma">Nacional</td>
+                  <td class="td-other">Local</td>
+                </tr>
+                <tr>
+                  <td class="td-label">Renda recorrente</td>
+                  <td class="td-talisma">Alta</td>
+                  <td class="td-other">Baixa</td>
+                </tr>
+                <tr>
+                  <td class="td-label">Payback médio</td>
+                  <td class="td-talisma td-talisma--bold">7 meses</td>
+                  <td class="td-other">12 - 24 meses</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HISTÓRIAS ============ -->
+      <section id="historias">
+        <div class="container">
+          <p data-reveal="up" class="eyebrow eyebrow--accent">
+            Histórias reais
+          </p>
+          <h2
+            data-reveal="up"
+            data-delay="60"
+            class="section-title section-title--wide"
+          >
+            Quem decidiu começar
+          </h2>
+          <div class="testimonials-grid">
+            <div data-reveal="up" data-delay="0" class="testimonial-card hv6">
+              <svg
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="var(--accent)"
+                class="testimonial-quote-icon"
+              >
+                <path
+                  d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0-2-2zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0 0-2z"
+                />
+              </svg>
+              <p class="testimonial-text">
+                A Talismã me deu o suporte e o método que eu precisava para sair
+                do zero e construir meu negócio.
+              </p>
+              <div data-dep-meta>
+                <div
+                  class="img-ph dep-avatar"
+                  id="dep-1"
+                  role="img"
+                  aria-label="Foto"
+                  data-img-placeholder="Foto"
+                >
+                  <img
+                    src="./assets/pessoa-um.png"
+                    alt="Foto de João Paulo"
+                    width="54"
+                    height="54"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="dep-info">
+                  <div class="dep-name">João Paulo</div>
+                  <div class="dep-location">Ribeirão Preto · SP</div>
+                </div>
+                <span data-dep-badge>Sócio 2022</span>
+              </div>
+            </div>
+            <div data-reveal="up" data-delay="90" class="testimonial-card hv6">
+              <svg
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="var(--accent)"
+                class="testimonial-quote-icon"
+              >
+                <path
+                  d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0-2-2zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0 0-2z"
+                />
+              </svg>
+              <p class="testimonial-text">
+                Hoje trabalho de casa, com mais qualidade de vida e uma renda
+                muito maior do que quando era CLT.
+              </p>
+              <div data-dep-meta>
+                <div
+                  class="img-ph dep-avatar"
+                  id="dep-2"
+                  role="img"
+                  aria-label="Foto"
+                  data-img-placeholder="Foto"
+                >
+                  <img
+                    src="./assets/pessoa-dois.png"
+                    alt="Foto de Mariana Alves"
+                    width="54"
+                    height="54"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="dep-info">
+                  <div class="dep-name">Mariana Alves</div>
+                  <div class="dep-location">Goiânia · GO</div>
+                </div>
+                <span data-dep-badge>Sócia 2021</span>
+              </div>
+            </div>
+            <div data-reveal="up" data-delay="180" class="testimonial-card hv6">
+              <svg
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="var(--accent)"
+                class="testimonial-quote-icon"
+              >
+                <path
+                  d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0-2-2zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a3 3 0 0 1-3 3v2c2.8 0 5-2.2 5-5V9a2 2 0 0 0 0-2z"
+                />
+              </svg>
+              <p class="testimonial-text">
+                Já no primeiro ano recuperei meu investimento e hoje tenho
+                liberdade financeira.
+              </p>
+              <div data-dep-meta>
+                <div
+                  class="img-ph dep-avatar"
+                  id="dep-3"
+                  role="img"
+                  aria-label="Foto"
+                  data-img-placeholder="Foto"
+                >
+                  <img
+                    src="./assets/pessoa-tres.png"
+                    alt="Foto de Carlos Mendes"
+                    width="54"
+                    height="54"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="dep-info">
+                  <div class="dep-name">Carlos Mendes</div>
+                  <div class="dep-location">Curitiba · PR</div>
+                </div>
+                <span data-dep-badge>Sócio 2020</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq">
+        <div class="container">
+          <p data-reveal="up" class="eyebrow eyebrow--strong">
+            Dúvidas frequentes
+          </p>
+          <h2
+            data-reveal="up"
+            data-delay="60"
+            class="section-title section-title--margin"
+          >
+            Ainda em dúvida?
+          </h2>
+          <div data-reveal="up" data-delay="100" class="faq-grid">
+            <div data-faq-item data-open="0">
+              <button data-faq-q>
+                Preciso ter experiência no mercado de seguros?
+                <svg
+                  data-faq-icon
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="var(--accent-strong)"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div data-faq-a>
+                <p class="faq-answer-p">
+                  Não. Você recebe treinamento completo e suporte contínuo para
+                  começar mesmo sem experiência no setor.
+                </p>
+              </div>
+            </div>
+            <div data-faq-item data-open="0">
+              <button data-faq-q>
+                Preciso ser corretor de seguros?
+                <svg
+                  data-faq-icon
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="var(--accent-strong)"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div data-faq-a>
+                <p class="faq-answer-p">
+                  Não é pré-requisito. Orientamos você sobre toda a parte de
+                  habilitação e operação ao longo do processo.
+                </p>
+              </div>
+            </div>
+            <div data-faq-item data-open="0">
+              <button data-faq-q>
+                Qual o valor do investimento?
+                <svg
+                  data-faq-icon
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="var(--accent-strong)"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div data-faq-a>
+                <p class="faq-answer-p">
+                  O investimento começa a partir de R$ 25 mil, bem abaixo de uma
+                  franquia tradicional, com payback médio de 7 meses.
+                </p>
+              </div>
+            </div>
+            <div data-faq-item data-open="0">
+              <button data-faq-q>
+                Qual tempo recupero meu investimento?
+                <svg
+                  data-faq-icon
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="var(--accent-strong)"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div data-faq-a>
+                <p class="faq-answer-p">
+                  O payback médio é de 7 meses, variando conforme dedicação,
+                  região e mix de produtos vendidos.
+                </p>
+              </div>
+            </div>
+            <div data-faq-item data-open="0">
+              <button data-faq-q>
+                A Talismã gera leads para mim?
+                <svg
+                  data-faq-icon
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="var(--accent-strong)"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div data-faq-a>
+                <p class="faq-answer-p">
+                  Você conta com materiais de marketing e apoio comercial para
+                  atrair e converter clientes na sua região.
+                </p>
+              </div>
+            </div>
+            <div data-faq-item data-open="0">
+              <button data-faq-q>
+                Posso trabalhar de qualquer lugar?
+                <svg
+                  data-faq-icon
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="var(--accent-strong)"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div data-faq-a>
+                <p class="faq-answer-p">
+                  Sim. A operação é 100% home based e digital, de alcance
+                  nacional — você atende de onde estiver.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA FINAL ============ -->
+      <section id="sou-socio">
+        <div class="container cta-inner">
+          <div class="cta-col-left">
+            <p data-reveal="up" class="eyebrow eyebrow--accent">Comece agora</p>
+            <h2 data-reveal="up" data-delay="60" class="section-title">
+              Quero ser sócio fraqueado da Talismã
+            </h2>
+            <p data-reveal="up" data-delay="120" class="cta-sub">
+              Preencha seus dados e descubra se existe disponibilidade para a
+              sua região.
+            </p>
+            <div data-reveal="up" data-delay="160" class="cta-checklist">
+              <div class="cta-check-item">
+                <span class="cta-check-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 13l4 4 10-12" /></svg
+                ></span>
+                <span class="cta-check-text">Atendimento personalizado</span>
+              </div>
+              <div class="cta-check-item">
+                <span class="cta-check-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 13l4 4 10-12" /></svg
+                ></span>
+                <span class="cta-check-text"
+                  >Análise da disponibilidade na sua região</span
+                >
+              </div>
+              <div class="cta-check-item">
+                <span class="cta-check-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 13l4 4 10-12" /></svg
+                ></span>
+                <span class="cta-check-text"
+                  >Apresentação completa do modelo</span
+                >
+              </div>
+            </div>
+          </div>
+          <div data-reveal="right" data-delay="120" class="cta-col-right">
+            <form class="form-card" data-wa-form>
+              <input
+                id="f-nome"
+                type="text"
+                placeholder="Nome completo"
+                aria-label="Nome completo"
+                class="form-field fc10"
+                autocomplete="name"
+              />
+              <input
+                id="f-fone"
+                type="tel"
+                placeholder="WhatsApp"
+                aria-label="Número de WhatsApp"
+                class="form-field fc10"
+                autocomplete="tel"
+              />
+              <input
+                id="f-email"
+                type="email"
+                placeholder="E-mail"
+                aria-label="Endereço de e-mail"
+                class="form-field fc10"
+                autocomplete="email"
+              />
+              <input
+                id="f-cidade"
+                type="text"
+                placeholder="Cidade"
+                aria-label="Cidade"
+                class="form-field fc10"
+                autocomplete="address-level2"
+              />
+              <select
+                id="f-capital"
+                aria-label="Capital disponível para investir"
+                class="form-field form-field--select fc10"
+              >
+                <option value="">Capital disponível para investir</option>
+                <option value="R$ 25 mil a R$ 50 mil">
+                  R$ 25 mil a R$ 50 mil
+                </option>
+                <option value="R$ 50 mil a R$ 100 mil">
+                  R$ 50 mil a R$ 100 mil
+                </option>
+                <option value="Acima de R$ 100 mil">Acima de R$ 100 mil</option>
+              </select>
+              <button type="submit" class="btn-submit hv7" data-magnetic>
+                Quero ser sócio
+              </button>
+              <p class="form-privacy">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="13"
+                  height="13"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="5" y="11" width="14" height="9" rx="2" />
+                  <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                </svg>
+                Seus dados estão protegidos e não serão compartilhados.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- /main-content -->
 
     <!-- ============ FOOTER ============ -->
     <footer>
