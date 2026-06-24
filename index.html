@@ -91,13 +91,25 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonte carregada de forma não-bloqueante (sem impacto no LCP) -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Skip-link para navegação por teclado -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <!-- Cursor personalizado -->
     <div class="cursor-dot" aria-hidden="true"></div>
     <div class="cursor-ring" aria-hidden="true"></div>
@@ -126,7 +138,7 @@
             height="40"
           />
         </a>
-        <nav class="header-nav">
+        <nav class="header-nav" aria-label="Navegação principal">
           <a href="#como" data-navlink>Como funciona</a>
           <a href="#ganhos" data-navlink>Ganhos</a>
           <a href="#historias" data-navlink>Histórias</a>
@@ -141,6 +153,8 @@
         </nav>
       </div>
     </header>
+
+    <main id="main-content">
 
     <!-- ============ HERO ============ -->
     <section id="topo" data-hero>
@@ -226,7 +240,7 @@
           </div>
         </div>
       </div>
-      <div data-scroll-cue>
+      <div data-scroll-cue aria-hidden="true">
         <svg
           viewBox="0 0 24 24"
           width="22"
@@ -812,9 +826,10 @@
               >
                 <img
                   src="./assets/pessoa-um.png"
-                  width="200px"
-                  height="auto"
-                  alt="empreendedor de sucesso"
+                  alt="Foto de João Paulo"
+                  width="54"
+                  height="54"
+                  loading="lazy"
                 />
               </div>
               <div class="dep-info">
@@ -850,9 +865,10 @@
               >
                 <img
                   src="./assets/pessoa-dois.png"
-                  width="200px"
-                  height="auto"
-                  alt="empreendedor de sucesso"
+                  alt="Foto de Mariana Alves"
+                  width="54"
+                  height="54"
+                  loading="lazy"
                 />
               </div>
               <div class="dep-info">
@@ -888,9 +904,10 @@
               >
                 <img
                   src="./assets/pessoa-tres.png"
-                  width="200px"
-                  height="auto"
-                  alt="empreendedor de sucesso"
+                  alt="Foto de Carlos Mendes"
+                  width="54"
+                  height="54"
+                  loading="lazy"
                 />
               </div>
               <div class="dep-info">
@@ -1133,6 +1150,7 @@
               id="f-nome"
               type="text"
               placeholder="Nome completo"
+              aria-label="Nome completo"
               class="form-field fc10"
               autocomplete="name"
             />
@@ -1140,6 +1158,7 @@
               id="f-fone"
               type="tel"
               placeholder="WhatsApp"
+              aria-label="Número de WhatsApp"
               class="form-field fc10"
               autocomplete="tel"
             />
@@ -1147,6 +1166,7 @@
               id="f-email"
               type="email"
               placeholder="E-mail"
+              aria-label="Endereço de e-mail"
               class="form-field fc10"
               autocomplete="email"
             />
@@ -1154,10 +1174,15 @@
               id="f-cidade"
               type="text"
               placeholder="Cidade"
+              aria-label="Cidade"
               class="form-field fc10"
               autocomplete="address-level2"
             />
-            <select id="f-capital" class="form-field form-field--select fc10">
+            <select
+              id="f-capital"
+              aria-label="Capital disponível para investir"
+              class="form-field form-field--select fc10"
+            >
               <option value="">Capital disponível para investir</option>
               <option value="R$ 25 mil a R$ 50 mil">
                 R$ 25 mil a R$ 50 mil
@@ -1189,6 +1214,8 @@
       </div>
     </section>
 
+    </main><!-- /main-content -->
+
     <!-- ============ FOOTER ============ -->
     <footer>
       <div class="container footer-grid">
@@ -1196,9 +1223,9 @@
           <div class="footer-brand-logo">
             <img
               src="./assets/logo.svg"
-              width="200px"
-              height="auto"
-              alt="logo talisma seguros"
+              width="200"
+              height="60"
+              alt="Talismã Seguros"
             />
           </div>
           <p class="footer-brand-desc">
@@ -1206,7 +1233,7 @@
           </p>
         </div>
         <div>
-          <h4 class="footer-nav-title">Para sua empresa</h4>
+          <h3 class="footer-nav-title">Para sua empresa</h3>
           <div class="footer-nav-links">
             <a href="#" class="footer-link hv8">Seguro Saúde</a>
             <a href="#" class="footer-link hv8">Seguro Empresarial</a>
@@ -1215,7 +1242,7 @@
           </div>
         </div>
         <div>
-          <h4 class="footer-nav-title">Para você</h4>
+          <h3 class="footer-nav-title">Para você</h3>
           <div class="footer-nav-links">
             <a href="#" class="footer-link hv8">Seguro Auto</a>
             <a href="#" class="footer-link hv8">Seguro Residencial</a>
@@ -1224,7 +1251,7 @@
           </div>
         </div>
         <div>
-          <h4 class="footer-nav-title">Institucional</h4>
+          <h3 class="footer-nav-title">Institucional</h3>
           <div class="footer-nav-links">
             <a href="#" class="footer-link hv8">A Talismã</a>
             <a href="#sou-socio" class="footer-link hv8">Seja um Sócio</a>
@@ -1233,7 +1260,7 @@
           </div>
         </div>
         <div>
-          <h4 class="footer-nav-title">Contato</h4>
+          <h3 class="footer-nav-title">Contato</h3>
           <a href="#" class="footer-contact-phone">(11) 92139-5027</a>
           <p class="footer-contact-label">Atendimento via WhatsApp</p>
           <div class="social-links">

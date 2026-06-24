@@ -515,7 +515,7 @@ select {
   font: 600 12px/1.4 Jost;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: #6b7384;
+  color: #5b6373;
   margin-top: 8px;
 }
 
@@ -748,7 +748,7 @@ select {
 }
 .ganhos-disclaimer {
   font: 400 12px/1.5 Jost;
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.72);
   margin: 6px 0 0;
 }
 
@@ -1367,6 +1367,24 @@ footer {
 /* =====================================================================
    Efeitos visuais — cursor · parallax · orbs · split-text · magnetic
    ===================================================================== */
+
+/* ---- Skip navigation (acessibilidade teclado) --------------------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font: 700 14px/1 Jost;
+  padding: 12px 20px;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
 
 /* ---- Cursor personalizado ----------------------------------------- */
 .cursor-dot,
